@@ -17,7 +17,10 @@
     "ai"
   ],
   "author": "Kostiantyn Smyrnov <kostysh@gmail.com>",
-  "contributors": [],
+  "contributors": [
+    "Kostiantyn Smyrnov <kostysh@gmail.com>",
+    "Dmitry Litvinov <dmitry_litvinov@me.com>"
+  ],
   "dependencies": {},
   "devDependencies": {
     "rimraf": "^2.6.2",
