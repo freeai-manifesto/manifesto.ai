@@ -11,7 +11,6 @@ $font-height: 1.5;
     color: #ffffff;
     text-align: left;
     font-family: $font-family;
-    font-family: $font-family;
     font-weight: $font-weight-regular;
     line-height: $font-height;    
 }
@@ -31,6 +30,14 @@ html, body {
     font-size: 100%;
 }
 
+hfooter {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 164px;
+    opacity: 0;
+}
+
 .logo {
     display: block;
     box-sizing: border-box;
@@ -44,7 +51,7 @@ html, body {
 }
 
 .container {
-    margin: 80px auto 164px auto;
+    margin: 80px auto 0 auto;
 }
 
 .m-b-40 {
@@ -151,7 +158,7 @@ icon {
     }
 
     .container {
-        margin: 82px auto 164px auto;
+        margin: 82px auto 0 auto;
         padding: 0 24px 0 24px;
     }
 
