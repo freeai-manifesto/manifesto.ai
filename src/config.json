@@ -1,0 +1,32 @@
+{
+  "options": {
+    "title": "Free AI Manifesto",
+    "author": "",
+    "description": "",
+    "copyright": "",
+    "email": "sign@manifesto.ai",
+    "twitter": {
+      "card": "",
+      "site": "",
+      "title": "",
+      "description": "",
+      "url": ""
+    },
+    "og": {
+      "title": "",
+      "description": "",
+      "url": "",
+      "image": ""
+    },
+    "contacts": {
+      "twitter": "#",
+      "facebook": "#",
+      "instagram": "#",
+      "linkedin": "#",
+      "medium": "#",
+      "telegram": "#",
+      "steemit": "#"
+    },
+    "gacode": "UA-XXXXXX-XX"
+  }
+}
