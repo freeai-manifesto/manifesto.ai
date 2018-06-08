@@ -2,8 +2,9 @@
 
 ## Development environment
 - node.js (v9 up)
-- npm (v6.1.0 up)
-For initial setup please run:
+- npm (v6.1.0 up)  
+
+For initial setup please run:  
 ```sh
 npm i
 ```
