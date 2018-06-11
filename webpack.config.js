@@ -67,6 +67,12 @@ module.exports = {
         }),
         new CopyWebpackPlugin([
             path.resolve(__dirname, 'src/robots.txt')
+        ]),
+        new CopyWebpackPlugin([
+            {
+                from: path.resolve(__dirname, 'src/assets/images/favicons'),
+                to: path.resolve(__dirname, 'dist')
+            }
         ])
     ]
 };
