@@ -50,12 +50,48 @@ hfooter {
     margin-bottom: 100px;
 }
 
+h1 {
+    &.red {
+        color: #ff0000;
+        font-size: 3.65em;
+        font-weight: $font-weight-heavy;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: -1px;
+        line-height: 1.25;
+    }
+}
+
+.sign-via-keybase {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ff0000;
+    box-shadow: 0 -0.5px 0.5px -0.5px rgba(255, 255, 255, 0.49);
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    color: white;
+    font-size: 1.8em;
+    text-decoration: none;
+}
+
 .container {
-    margin: 80px auto 0 auto;
+    margin: 110px auto 0 auto;
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
 }
 
 .m-b-40 {
     margin-bottom: 40px;
+}
+
+.m-b-80 {
+    margin-bottom: 80px;
 }
 
 .m-bp {
@@ -73,69 +109,90 @@ b, strong {
 intro {
     display: block;
     box-sizing: border-box;
-    font-size: 4.15em;
+    font-size: 3.9em;
     margin-bottom: 200px
 }
 
 comment {
     display: block;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 
     p {
-        font-size: 1em;
+        font-size: 1.2em;
         color: #d1d1d1;
+    }
+
+    &.terminal {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: -20px;
+            left: -80px;
+            right: -40px;
+            bottom: -20px;
+            background-color: rgba(105, 105, 105, 0.3);
+            border-radius: 8px;
+        }
+
+        p {
+            color: #45d492;
+        }
     }
 }
 
 h1 {
     font-size: 3.5em;
     padding-bottom: 80px;
-    font-weight: $font-weight-heavy;
+    font-weight: $font-weight-regular;
 }
 
 h2 {
     font-size: 2em;
     padding-bottom: 40px;
-    font-weight: $font-weight-heavy;
+    font-weight: $font-weight-regular;
 }
 
-icon {
-    display: inline-block;
-    box-sizing: border-box;
-    vertical-align: middle;
-    width: 32px;
-    height: 32px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-right: 16px;
+fr {
+    color: #45d492;
+    background-color: rgba(105, 105, 105, 0.3);
+    padding: 5px 10px;
+    border-radius: 6px;
+}
 
-    &.twitter {
-        background-image: url('../images/twitter.svg');
+.social {
+
+    div {
+        font-size: 1.2em;
+        margin-bottom: 10px;
     }
 
-    &.facebook {
-        background-image: url('../images/facebook.svg');
+    icon {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 16px;
+        vertical-align: text-bottom;
     }
 
-    &.instagram {
-        background-image: url('../images/instagram.svg');
+    .keybase {
+        
+        icon {
+            background-image: url('../images/keybase.svg');
+        }
     }
 
-    &.linkedin {
-        background-image: url('../images/linkedin.svg');
-    }
-
-    &.medium {
-        background-image: url('../images/medium.svg');
-    }
-
-    &.telegram {
-        background-image: url('../images/telegram.svg');
-    }
-
-    &.steemit {
-        background-image: url('../images/steemit.svg');
+    .twitter {
+        
+        icon {
+            background-image: url('../images/twitter.svg');
+        }
     }
 }
 
@@ -182,6 +239,10 @@ icon {
     h1 {
         font-size: 1.8em;
         padding-bottom: 35px;
+
+        &.red {
+            font-size: 3em;            
+        }
     }
     
     h2 {
@@ -189,10 +250,22 @@ icon {
         padding-bottom: 35px;
     }
 
-    icon {
-        width: 36px;
-        height: 36px;
-        margin-right: 18px;
-        margin-bottom: 28px;
+    .sign-via-keybase {
+        padding: 10px 15px 10px 15px;        
+        font-size: 1.6em;
+    }
+
+    .social {
+        font-size: 0.8em;
+
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        icon {
+            margin-right: 0;
+        }
     }
 }
