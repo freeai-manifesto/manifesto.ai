@@ -39,26 +39,64 @@ hfooter {
 }
 
 .logo {
-    display: block;
     box-sizing: border-box;
     width: 100%;
     height: 120px;
-    background-position: center;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -1000px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center bottom;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-image: url('../images/manifesto.png');
+    }
+}
+
+.logo-bottom {
+    width: 100%;
+    max-width: 340px;
+    height: 100px;
+    background-position: left center;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url('../images/manifesto.svg');
-    margin-bottom: 100px;
+    background-image: url('../images/manifesto-bottom.png'); 
+    margin-top: 60px; 
+    
+    &.keybase {
+        max-width: 420px;
+    }
 }
 
 h1 {
     &.red {
         color: #ff0000;
         font-size: 3.65em;
-        font-weight: $font-weight-heavy;
+        font-weight: $font-weight-regular;
         font-style: normal;
         font-stretch: normal;
         letter-spacing: -1px;
         line-height: 1.25;
+    }
+
+    &.glow {
+        text-shadow: 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+    }
+
+    &.support-this {
+        margin-bottom: 0;
+    }
+
+    br {
+        line-height: 0;
     }
 }
 
@@ -70,7 +108,7 @@ h1 {
     padding: 10px 30px 10px 30px;
     text-align: center;
     color: white;
-    font-size: 1.8em;
+    font-size: 1.7em;
     text-decoration: none;
 }
 
@@ -95,7 +133,7 @@ h1 {
 }
 
 .m-bp {
-    margin-bottom: 164px;
+    margin-bottom: 80px;
 }
 
 .m-b-200 {
@@ -214,6 +252,10 @@ fr {
         margin-bottom: 100px;
     }
 
+    .m-bp {
+        margin-bottom: 60px;
+    }
+
     .container {
         margin: 82px auto 0 auto;
         padding: 0 24px 0 24px;
@@ -221,6 +263,7 @@ fr {
 
     .logo {
         height: 80px;
+        margin-top: 0;
         margin-bottom: 72px;
     }
 
@@ -242,6 +285,10 @@ fr {
 
         &.red {
             font-size: 3em;            
+        }
+
+        &.support-this {
+            margin-bottom: 20px;
         }
     }
     
