@@ -43,7 +43,7 @@ hfooter {
     width: 100%;
     height: 120px;
     margin-top: 40px;
-    margin-bottom: 100px;
+    margin-bottom: 64px;
     position: relative;
     overflow: visible;
 
@@ -54,9 +54,9 @@ hfooter {
         left: 0;
         right: 0;
         bottom: 0;
-        background-position: center bottom;
+        background-position: -12px bottom;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: 101%;
         background-image: url('../images/manifesto.png');
     }
 }
@@ -65,7 +65,7 @@ hfooter {
     width: 100%;
     max-width: 340px;
     height: 100px;
-    background-position: left center;
+    background-position: -8 px center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../images/manifesto-bottom.png'); 
@@ -76,7 +76,27 @@ hfooter {
     }
 }
 
+h2 {
+    font-size: 2em;
+    padding-bottom: 18px;
+    font-weight: $font-weight-regular;
+
+    &.with-comment {
+        padding-bottom: 10px;
+    }
+}
+
 h1 {
+    font-size: 3.5em;
+    padding-bottom: 64px;
+    font-weight: $font-weight-regular;
+
+    &.hash {
+        font-size: 2.2em;
+        margin-top: 16px;
+        line-height: 1.1;
+    }
+
     &.red {
         color: #ff0000;
         font-size: 3.65em;
@@ -92,11 +112,23 @@ h1 {
     }
 
     &.support-this {
+        font-size: 3.8em;
         margin-bottom: 0;
     }
 
     br {
         line-height: 0;
+    }
+}
+
+ul {
+    list-style-type: disc;
+    padding-top: 10px;
+    margin-bottom: 16px;
+
+    li {
+        margin-left: 30px;
+        margin-bottom: 8px;
     }
 }
 
@@ -114,6 +146,7 @@ h1 {
 
 .container {
     margin: 110px auto 0 auto;
+    overflow-x: hidden;
 }
 
 .m-b-20 {
@@ -133,7 +166,7 @@ h1 {
 }
 
 .m-bp {
-    margin-bottom: 80px;
+    margin-bottom: 64px;
 }
 
 .m-b-200 {
@@ -148,7 +181,7 @@ intro {
     display: block;
     box-sizing: border-box;
     font-size: 3.9em;
-    margin-bottom: 200px
+    margin-bottom: 64px;
 }
 
 comment {
@@ -156,46 +189,48 @@ comment {
     box-sizing: border-box;    
 
     p {
-        font-size: 1.2em;
+        font-size: 1.15em;
         color: #d1d1d1;
+        margin-bottom: 10px;
     }
 
     &.terminal {
         position: relative;
+        margin-top: 50px;
+        margin-bottom: 84px; 
 
         &::before {
             position: absolute;
             content: '';
-            top: -20px;
-            left: -80px;
-            right: -40px;
-            bottom: -20px;
+            top: -32px;
+            left: -124px;
+            right: -32px;
+            bottom: -32px;
             background-color: rgba(105, 105, 105, 0.3);
             border-radius: 8px;
         }
 
         p {
-            color: #45d492;
+            color: #45d492 !important;
+            margin-bottom: 12px;
         }
     }
 }
 
-h1 {
-    font-size: 3.5em;
-    padding-bottom: 80px;
-    font-weight: $font-weight-regular;
-}
+.keybase {
 
-h2 {
-    font-size: 2em;
-    padding-bottom: 40px;
-    font-weight: $font-weight-regular;
+    comment {
+        p {
+            color: white;
+            font-size: 1.23em;
+        }
+    }
 }
 
 fr {
     color: #45d492;
     background-color: rgba(105, 105, 105, 0.3);
-    padding: 5px 10px;
+    padding: 5px 12px;
     border-radius: 6px;
 }
 
@@ -276,6 +311,22 @@ fr {
             
         p {
             font-size: 0.95em;
+        }
+    }
+
+    .keybase {
+
+        comment {
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .logo {
+            
+        &::before {
+            background-position: -3px bottom;
         }
     }
 
