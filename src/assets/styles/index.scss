@@ -2,6 +2,7 @@
 @import './grid.scss';
 
 $font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+$font-weight-thin: 200;
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-heavy: 500;
@@ -11,7 +12,7 @@ $font-height: 1.5;
     color: #ffffff;
     text-align: left;
     font-family: $font-family;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-light;
     line-height: $font-height;    
 }
 
@@ -28,6 +29,7 @@ html, body {
     top: 0;
     background-color: #000000;
     font-size: 100%;
+    overflow-x: hidden;
 }
 
 hfooter {
@@ -63,23 +65,19 @@ hfooter {
 
 .logo-bottom {
     width: 100%;
-    max-width: 340px;
+    max-width: 420px;
     height: 100px;
-    background-position: -8 px center;
+    background-position: -12px center;
     background-repeat: no-repeat;
     background-size: contain;
     background-image: url('../images/manifesto-bottom.png'); 
     margin-top: 60px; 
-    
-    &.keybase {
-        max-width: 420px;
-    }
 }
 
 h2 {
     font-size: 2em;
     padding-bottom: 18px;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-light;
 
     &.with-comment {
         padding-bottom: 10px;
@@ -89,7 +87,7 @@ h2 {
 h1 {
     font-size: 3.5em;
     padding-bottom: 64px;
-    font-weight: $font-weight-regular;
+    font-weight: $font-weight-light;
 
     &.hash {
         font-size: 2.2em;
@@ -100,7 +98,7 @@ h1 {
     &.red {
         color: #ff0000;
         font-size: 3.65em;
-        font-weight: $font-weight-regular;
+        font-weight: $font-weight-light;
         font-style: normal;
         font-stretch: normal;
         letter-spacing: -1px;
@@ -112,7 +110,7 @@ h1 {
     }
 
     &.support-this {
-        font-size: 3.8em;
+        font-size: 4.6em;
         margin-bottom: 0;
     }
 
@@ -123,10 +121,11 @@ h1 {
 
 ul {
     list-style-type: disc;
-    padding-top: 10px;
+    padding-top: 6px;
     margin-bottom: 16px;
 
     li {
+        color: #d1d1d1;
         margin-left: 30px;
         margin-bottom: 8px;
     }
@@ -137,7 +136,7 @@ ul {
     border-radius: 4px;
     background-color: #ff0000;
     box-shadow: 0 -0.5px 0.5px -0.5px rgba(255, 255, 255, 0.49);
-    padding: 10px 30px 10px 30px;
+    padding: 20px 62px 20px 62px;
     text-align: center;
     color: white;
     font-size: 1.7em;
@@ -145,8 +144,7 @@ ul {
 }
 
 .container {
-    margin: 110px auto 0 auto;
-    overflow-x: hidden;
+    margin: 110px auto 0 auto;    
 }
 
 .m-b-20 {
@@ -189,9 +187,10 @@ comment {
     box-sizing: border-box;    
 
     p {
-        font-size: 1.15em;
+        font-size: 1.2em;
+        font-weight: $font-weight-light;
         color: #d1d1d1;
-        margin-bottom: 10px;
+        margin-bottom: 10px;        
     }
 
     &.terminal {
@@ -231,6 +230,7 @@ fr {
     color: #45d492;
     background-color: rgba(105, 105, 105, 0.3);
     padding: 5px 12px;
+    margin: 0 3px 0 3px;
     border-radius: 6px;
 }
 
@@ -312,6 +312,13 @@ fr {
         p {
             font-size: 0.95em;
         }
+
+        &.terminal {
+                
+            &::before {
+                left: -32px;
+            }
+        }
     }
 
     .keybase {
@@ -340,6 +347,10 @@ fr {
 
         &.support-this {
             margin-bottom: 20px;
+        }
+
+        &.hash {
+            font-size: 1.75em;
         }
     }
     
