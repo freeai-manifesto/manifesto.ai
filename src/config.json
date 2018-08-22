@@ -9,13 +9,13 @@
       "site": "@pandoraboxchain",
       "title": "Decentralized AI Manifesto",
       "description": "Multiple artificial intelligences must not be censored or controlled by anybody #freeai",
-      "image": "ssm-manifesto.jpg"      
+      "image": "https://manifesto.ai/ssm-manifesto.jpg"      
     },
     "og": {
       "title": "Decentralized AI Manifesto",
       "description": "Multiple artificial intelligences must not be censored or controlled by anybody #freeai",
       "url": "manifesto.ai",
-      "image": "ssm-manifesto.jpg",
+      "image": "https://manifesto.ai/ssm-manifesto.jpg",
       "image_width": 600,
       "image_height": 314
     }
