@@ -5,17 +5,19 @@
     "copyright": "free",
     "email": "sign@manifesto.ai",
     "twitter": {
-      "card": "",
-      "site": "",
-      "title": "",
-      "description": "",
-      "image": ""
+      "card": "summary",
+      "site": "@pandoraboxchain",
+      "title": "Sign manifesto.ai via Keybase",
+      "description": "Multiple artificial intelligences must not be censored or controlled by anybody #freeai",
+      "image": "ssm-manifesto.jpg"
     },
     "og": {
-      "title": "",
-      "description": "",
-      "url": "",
-      "image": ""
+      "title": "Sign manifesto.ai via Keybase",
+      "description": "Multiple artificial intelligences must not be censored or controlled by anybody #freeai",
+      "url": "manifesto.ai",
+      "image": "ssm-manifesto.jpg",
+      "image_width": 600,
+      "image_height": 314
     }
   }
 }

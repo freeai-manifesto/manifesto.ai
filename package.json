@@ -1,6 +1,6 @@
 {
   "name": "manifesto-ai",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "description": "Multiple artificial intelligences must not be censored or controlled by anybody",
   "private": true,
   "license": "MIT",
@@ -14,6 +14,7 @@
   "keywords": [
     "manifesto.ai",
     "manifesto",
+    "freeai",
     "ai"
   ],
   "author": "Kostiantyn Smyrnov <kostysh@gmail.com>",
@@ -28,13 +29,13 @@
     "html-webpack-plugin": "^4.0.0-alpha",
     "copy-webpack-plugin": "^4.5.2",
     "mini-css-extract-plugin": "^0.4.1",
-    "node-sass": "^4.9.2",
-    "file-loader": "^1.1.11",
-    "url-loader": "^1.0.1",
-    "sass-loader": "^7.0.3",
-    "postcss-loader": "^2.1.6",
-    "autoprefixer": "^9.0.1",
-    "webpack": "^4.16.3",
+    "node-sass": "^4.9.3",
+    "file-loader": "^2.0.0",
+    "url-loader": "^1.1.1",
+    "sass-loader": "^7.1.0",
+    "postcss-loader": "^3.0.0",
+    "autoprefixer": "^9.1.3",
+    "webpack": "^4.17.1",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
   }
