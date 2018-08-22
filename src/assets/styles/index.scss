@@ -29,7 +29,7 @@ html, body {
     top: 0;
     background-color: #000000;
     font-size: 100%;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 hfooter {
@@ -144,7 +144,8 @@ ul {
 }
 
 .container {
-    margin: 110px auto 0 auto;    
+    margin: 110px auto 0 auto;  
+    overflow-x: hidden;  
 }
 
 .m-b-20 {
@@ -184,8 +185,8 @@ intro {
 
 comment {
     display: block;
-    box-sizing: border-box;    
-
+    box-sizing: border-box;
+    
     p {
         font-size: 1.2em;
         font-weight: $font-weight-light;
@@ -196,8 +197,8 @@ comment {
     &.terminal {
         position: relative;
         margin-top: 50px;
-        margin-bottom: 84px; 
-
+        margin-bottom: 84px;
+        
         &::before {
             position: absolute;
             content: '';
