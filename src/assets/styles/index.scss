@@ -28,8 +28,11 @@ html, body {
     left: 0;
     top: 0;
     background-color: #000000;
-    font-size: 100%;
-    //overflow-x: hidden;
+    font-size: 100%;    
+}
+
+html {
+    overflow-x: hidden;
 }
 
 hfooter {
@@ -144,8 +147,7 @@ ul {
 }
 
 .container {
-    margin: 110px auto 0 auto;  
-    overflow-x: hidden;  
+    margin: 110px auto 0 auto; 
 }
 
 .m-b-20 {

@@ -309,6 +309,9 @@ html, body {
   background-color: #000000;
   font-size: 100%; }
 
+html {
+  overflow-x: hidden; }
+
 hfooter {
   display: block;
   -webkit-box-sizing: border-box;
@@ -401,8 +404,7 @@ ul {
   text-decoration: none; }
 
 .container {
-  margin: 110px auto 0 auto;
-  overflow-x: hidden; }
+  margin: 110px auto 0 auto; }
 
 .m-b-20 {
   margin-bottom: 20px; }
