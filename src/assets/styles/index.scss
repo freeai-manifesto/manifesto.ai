@@ -84,6 +84,7 @@ h2 {
 
     .anchor {
         margin-left: -56px;
+        font-weight: $font-weight-heavy;
     }
 
     &.with-comment {
@@ -297,6 +298,8 @@ fr {
 
 .social {
     margin-left: -64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 
     div {
         font-size: 1.2em;
@@ -428,16 +431,21 @@ fr {
     h2 {
         font-size: 1em;
         padding-bottom: 35px;
+
+        .anchor {
+            margin-left: 0;
+        }
     }
 
     .sign-via-keybase {
         padding: 10px 15px 10px 15px;        
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
 
     .social {
         font-size: 0.8em;
-
+        margin-left: 0;
+        
         div {
             white-space: nowrap;
             overflow: hidden;
@@ -446,6 +454,21 @@ fr {
 
         icon {
             margin-right: 0;
+        }
+
+        .keybase {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .twitter {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 0;
         }
     }
 }

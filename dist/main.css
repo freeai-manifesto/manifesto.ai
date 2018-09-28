@@ -356,7 +356,8 @@ h2 {
   padding-bottom: 18px;
   font-weight: 500; }
   h2 .anchor {
-    margin-left: -56px; }
+    margin-left: -56px;
+    font-weight: 500; }
   h2.with-comment {
     padding-bottom: 10px; }
 
@@ -510,7 +511,9 @@ fr {
   border-radius: 6px; }
 
 .social {
-  margin-left: -64px; }
+  margin-left: -64px;
+  overflow: hidden;
+  text-overflow: ellipsis; }
   .social div {
     font-size: 1.2em;
     margin-bottom: 10px; }
@@ -581,15 +584,29 @@ fr {
   h2 {
     font-size: 1em;
     padding-bottom: 35px; }
+    h2 .anchor {
+      margin-left: 0; }
   .sign-via-keybase {
     padding: 10px 15px 10px 15px;
-    font-size: 1.6em; }
+    font-size: 1.2em; }
   .social {
-    font-size: 0.8em; }
+    font-size: 0.8em;
+    margin-left: 0; }
     .social div {
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis; }
     .social icon {
-      margin-right: 0; } }
+      margin-right: 0; }
+    .social .keybase {
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis; }
+    .social .twitter {
+      float: left;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-left: 0; } }
 
