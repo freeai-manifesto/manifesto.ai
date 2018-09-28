@@ -15,3 +15,10 @@ if (process.env.NODE_ENV === "development") {
         })
     }
 }
+
+window.showToast = function(text) {
+    var x = document.getElementById('snackbar');
+    x.innerHTML = String(text).replace(/<.*?>/, '');
+    x.className = 'show';
+    setTimeout(function(){ x.className = x.className.replace('show', ''); }, 3000);
+}

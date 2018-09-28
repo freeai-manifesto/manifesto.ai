@@ -64,7 +64,7 @@
 /******/
 /******/ 	var hotApplyOnUpdate = true;
 /******/ 	// eslint-disable-next-line no-unused-vars
-/******/ 	var hotCurrentHash = "c2e8ee637d388362d976";
+/******/ 	var hotCurrentHash = "b1bbd893e9819ba8d295";
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule;
@@ -845,7 +845,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=webpack:///./src/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./assets/styles/reset.css */ \"./src/assets/styles/reset.css\");\n__webpack_require__(/*! ./assets/styles/index.scss */ \"./src/assets/styles/index.scss\");\n\nif (true) {\n\n    if (true) {\n        \n        var hotEmitter = __webpack_require__(/*! webpack/hot/emitter */ \"./node_modules/webpack/hot/emitter.js\");\n        hotEmitter.on(\"webpackHotUpdate\", function (currentHash) {\n\n            document.querySelectorAll('link[href][rel=stylesheet]').forEach((link) => {\n                const nextStyleHref = link.href.replace(/(\\?\\d+)?$/, `?${Date.now()}`)\n                link.href = nextStyleHref\n            })\n        })\n    }\n}\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__(/*! ./assets/styles/reset.css */ \"./src/assets/styles/reset.css\");\n__webpack_require__(/*! ./assets/styles/index.scss */ \"./src/assets/styles/index.scss\");\n\nif (true) {\n\n    if (true) {\n        \n        var hotEmitter = __webpack_require__(/*! webpack/hot/emitter */ \"./node_modules/webpack/hot/emitter.js\");\n        hotEmitter.on(\"webpackHotUpdate\", function (currentHash) {\n\n            document.querySelectorAll('link[href][rel=stylesheet]').forEach((link) => {\n                const nextStyleHref = link.href.replace(/(\\?\\d+)?$/, `?${Date.now()}`)\n                link.href = nextStyleHref\n            })\n        })\n    }\n}\n\nwindow.showToast = function(text) {\n    var x = document.getElementById('snackbar');\n    x.innerHTML = String(text).replace(/<.*?>/, '');\n    x.className = 'show';\n    setTimeout(function(){ x.className = x.className.replace('show', ''); }, 3000);\n}\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

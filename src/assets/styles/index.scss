@@ -1,5 +1,6 @@
 @import './fonts.scss';
 @import './grid.scss';
+@import './toast.scss';
 
 $font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
 $font-weight-thin: 200;
@@ -229,6 +230,7 @@ comment {
             margin-bottom: 12px;
             font-size: 1.2em !important;
             font-weight: $font-weight-light !important;
+            word-break: break-all;
         }
 
         .clip, .clip-complex1 {
@@ -250,7 +252,8 @@ comment {
                 background-repeat: no-repeat;
                 background-size: contain;
                 background-image: url('../images/clip.svg');
-                opacity: 0.1;
+                opacity: 0.25;
+                cursor: pointer;
             }
 
             &:focus {
@@ -260,7 +263,7 @@ comment {
             &:active {
 
                 icon {
-                    opacity: 0.4;
+                    opacity: 0.6;
                 }
             }
         }

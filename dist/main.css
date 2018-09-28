@@ -289,6 +289,74 @@ input[type=button] {
   .hidden-sm {
     display: block; } }
 
+#snackbar {
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: #333;
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */ }
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+  visibility: visible;
+  /* Show the snackbar */
+  /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+   However, delay the fade out process for 2.5 seconds */
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+
+@keyframes fadein {
+  from {
+    bottom: 0;
+    opacity: 0; }
+  to {
+    bottom: 30px;
+    opacity: 1; } }
+
+@-webkit-keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+
+@keyframes fadeout {
+  from {
+    bottom: 30px;
+    opacity: 1; }
+  to {
+    bottom: 0;
+    opacity: 0; } }
+
 * {
   color: #ffffff;
   text-align: left;
@@ -467,7 +535,8 @@ comment {
       color: #45d492 !important;
       margin-bottom: 12px;
       font-size: 1.2em !important;
-      font-weight: 300 !important; }
+      font-weight: 300 !important;
+      word-break: break-all; }
     comment.terminal .clip, comment.terminal .clip-complex1 {
       display: block;
       float: right;
@@ -486,11 +555,12 @@ comment {
         background-repeat: no-repeat;
         background-size: contain;
         background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjEwMjQiIHdpZHRoPSI4OTYiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgPHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMjggNzY4aDI1NnY2NEgxMjh2LTY0eiBtMzIwLTM4NEgxMjh2NjRoMzIwdi02NHogbTEyOCAxOTJWNDQ4TDM4NCA2NDBsMTkyIDE5MlY3MDRoMzIwVjU3Nkg1NzZ6IG0tMjg4LTY0SDEyOHY2NGgxNjB2LTY0ek0xMjggNzA0aDE2MHYtNjRIMTI4djY0eiBtNTc2IDY0aDY0djEyOGMtMSAxOC03IDMzLTE5IDQ1cy0yNyAxOC00NSAxOUg2NGMtMzUgMC02NC0yOS02NC02NFYxOTJjMC0zNSAyOS02NCA2NC02NGgxOTJDMjU2IDU3IDMxMyAwIDM4NCAwczEyOCA1NyAxMjggMTI4aDE5MmMzNSAwIDY0IDI5IDY0IDY0djMyMGgtNjRWMzIwSDY0djU3Nmg2NDBWNzY4ek0xMjggMjU2aDUxMmMwLTM1LTI5LTY0LTY0LTY0aC02NGMtMzUgMC02NC0yOS02NC02NHMtMjktNjQtNjQtNjQtNjQgMjktNjQgNjQtMjkgNjQtNjQgNjRoLTY0Yy0zNSAwLTY0IDI5LTY0IDY0eiIgLz4KPC9zdmc+Cg==);
-        opacity: 0.1; }
+        opacity: 0.25;
+        cursor: pointer; }
       comment.terminal .clip:focus, comment.terminal .clip-complex1:focus {
         outline: none; }
       comment.terminal .clip:active icon, comment.terminal .clip-complex1:active icon {
-        opacity: 0.4; }
+        opacity: 0.6; }
 
 .keybase comment p {
   color: white;

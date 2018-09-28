@@ -89,7 +89,8 @@
             </comment>
 
             <comment class="terminal">
-				<button class="clip" data-clipboard-text="keybase team request-access freeai">
+				<button class="clip" data-clipboard-text="keybase team request-access freeai" 
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>
@@ -104,42 +105,48 @@
             </comment>
 
             <comment class="terminal">
-				<button class="clip" data-clipboard-text="git clone keybase://team/freeai/freeai-manifesto">
+				<button class="clip" data-clipboard-text="git clone keybase://team/freeai/freeai-manifesto"
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>git clone keybase://team/freeai/freeai-manifesto</p>                          
 			</comment>
 			
 			<comment class="terminal">
-				<button class="clip" data-clipboard-text="cd freeai-manifesto">
+				<button class="clip" data-clipboard-text="cd freeai-manifesto"
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>cd freeai-manifesto</p>                
 			</comment>
 			
 			<comment class="terminal">
-				<button class="clip" data-clipboard-text="keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`">
+				<button class="clip" data-clipboard-text="keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`"
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`</p>                
 			</comment>
 			
 			<comment class="terminal">
-				<button class="clip" data-clipboard-text="git add .">
+				<button class="clip" data-clipboard-text="git add ."
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>git add .</p>                
 			</comment>
 			
 			<comment class="terminal">
-				<button class="clip-complex1">
+				<button class="clip-complex1"
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>git commit -m "Signed by `keybase status | grep 'Username:' | awk '{print $2}'`"</p>
 			</comment>
 			
 			<comment class="terminal">
-				<button class="clip" data-clipboard-text="git push">
+				<button class="clip" data-clipboard-text="git push"
+				onclick="showToast('Copied to clipboard')">
 					<icon alt="Copy to clipboard"></icon>
 				</button>
                 <p>git push</p>                
@@ -168,6 +175,7 @@
 		<div class="col-1"></div>		
 	</div>	
 </div>
+<div id="snackbar"></div>
 <hfooter></hfooter>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
