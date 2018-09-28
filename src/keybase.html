@@ -57,6 +57,8 @@
 	<meta property="og:image:width" content="<%= options.og.image_width %>" />
 	<meta property="og:image:height" content="<%= options.og.image_height %>" />
 
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+
 </head>
 
 <body>
@@ -66,29 +68,30 @@
 		<div class="col-1"></div>
 		<div class="col-10">
 
-			<a href="index.html"><div class="logo"></div></a>
-	
-            <h1>Follow the instructions</h1>
+			<h1>Follow the instructions</h1>
             
             <comment class="m-bp">
                 <p>
-                    1. Install (if you don't have) Keybase from <a href="https://keybase.io">https://keybase.io</a>. Press Create an account and follow the instructions on the screen to create your identity
+                    <span class="anchor">1.</span> Install (if you don't have) Keybase from <a href="https://keybase.io">https://keybase.io</a>. Press Create an account and follow the instructions on the screen to create your identity
                 </p>
             </comment>
 
             <comment class="m-bp">
                 <p>
-                    2. If you don't have PGP at your Keybase, press Prove your identities → Create PGP key and follow instructions to set up your own key
+                    <span class="anchor">2.</span> If you don't have PGP at your Keybase, press Prove your identities → Create PGP key and follow instructions to set up your own key
                 </p>
             </comment>
 
             <comment class="m-b-40">
                 <p>
-                    3. Join <fr>freeai</fr> group – either with Keybase UI or using command
+                    <span class="anchor">3.</span> Join <fr>freeai</fr> group – either with Keybase UI or using command
                 </p>
             </comment>
 
             <comment class="terminal">
+				<button class="clip" data-clipboard-text="keybase team request-access freeai">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
                 <p>
                     keybase team request-access freeai
                 </p>
@@ -96,16 +99,49 @@
 
             <comment class="m-b-40">
                 <p>
-                    4. Perform the following commands:
+                    <span class="anchor">4.</span> Perform the following commands:
                 </p>
             </comment>
 
             <comment class="terminal">
-                <p>git clone keybase://team/freeai/freeai-manifesto</p>
-                <p>cd freeai-manifesto</p>
-                <p>keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`</p>
-                <p>git add .</p>
+				<button class="clip" data-clipboard-text="git clone keybase://team/freeai/freeai-manifesto">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
+                <p>git clone keybase://team/freeai/freeai-manifesto</p>                          
+			</comment>
+			
+			<comment class="terminal">
+				<button class="clip" data-clipboard-text="cd freeai-manifesto">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
+                <p>cd freeai-manifesto</p>                
+			</comment>
+			
+			<comment class="terminal">
+				<button class="clip" data-clipboard-text="keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
+                <p>keybase pgp sign -c -i the_freeai_manifesto.txt -o signatures/`keybase status | grep 'Username:' | awk '{print $2}'`</p>                
+			</comment>
+			
+			<comment class="terminal">
+				<button class="clip" data-clipboard-text="git add .">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
+                <p>git add .</p>                
+			</comment>
+			
+			<comment class="terminal">
+				<button class="clip-complex1">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
                 <p>git commit -m "Signed by `keybase status | grep 'Username:' | awk '{print $2}'`"</p>
+			</comment>
+			
+			<comment class="terminal">
+				<button class="clip" data-clipboard-text="git push">
+					<icon alt="Copy to clipboard"></icon>
+				</button>
                 <p>git push</p>                
             </comment>
 
@@ -122,11 +158,11 @@
 				</div>
 				<div class="twitter">
 					<icon></icon> 
-					Tweet with hashtags #FreeAI #DecentralizeAI
+					Share with <span class="link" onclick="gtag('event', 'twitter', {'event_category': 'share', 'event_label': 'main_page', 'value': ''});window.open('https://twitter.com/intent/tweet?text=I+do+support+The+%23FreeAI+Manifesto+%40FreeAIManifesto+and+proclaim+that+%23AI+must+be+multiple+and+not+censored+or+controlled+by+anybody&url=https%3A%2F%2Fmanifesto.ai', '_blank')">Twitter</span>
 				</div>
 			</comment>
 
-			<div style="filter: grayscale(100%);" class="logo-bottom keybase"></div>
+			<div class="logo-bottom keybase"></div>
 
 		</div>
 		<div class="col-1"></div>		
@@ -170,6 +206,15 @@ src="//www.facebook.com/tr?id=1183323611849350&ev=PageView&noscript=1" /></noscr
 	twq('track','PageView');
 	</script>
 <!-- End Twitter universal website tag code -->
+
+<script>
+	new ClipboardJS('.clip');
+	new ClipboardJS('.clip-complex1', {
+		text: function() {
+			return 'git commit -m "Signed by `keybase status | grep \'Username:\' | awk \'{print $2}\'`"';
+		}
+	});
+</script>
 
 </body>
 </html>
