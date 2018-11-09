@@ -389,6 +389,7 @@ hfooter {
   opacity: 0; }
 
 .logo {
+  display: block;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 100%;
@@ -433,6 +434,11 @@ h1 {
   font-size: 3.5em;
   padding-bottom: 64px;
   font-weight: 300; }
+  h1.title {
+    color: #ff0000;
+    font-size: 3.75em;
+    padding-top: 100px;
+    padding-bottom: 10px; }
   h1.hash {
     font-size: 2.2em;
     margin-top: 16px;
