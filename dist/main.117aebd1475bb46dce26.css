@@ -438,7 +438,8 @@ h1 {
     color: #ff0000;
     font-size: 3.75em;
     padding-top: 100px;
-    padding-bottom: 10px; }
+    padding-bottom: 30px;
+    line-height: 1; }
   h1.hash {
     font-size: 2.2em;
     margin-top: 16px;
