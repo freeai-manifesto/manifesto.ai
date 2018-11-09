@@ -407,7 +407,7 @@ hfooter {
     background-position: 0 bottom;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(manifesto.png); }
+    background-image: url(manifesto.df548433bb0524298fa685aaa158cac3.png); }
 
 .logo-bottom {
   width: 100%;
@@ -588,7 +588,8 @@ fr {
     font-size: 1.2em;
     margin-bottom: 10px; }
   .social .link {
-    text-decoration: underline; }
+    text-decoration: underline;
+    cursor: pointer; }
   .social icon {
     display: inline-block;
     -webkit-box-sizing: border-box;
