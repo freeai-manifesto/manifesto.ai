@@ -1,0 +1,23 @@
+{
+  "options": {
+    "title": "Decentralized AI Manifesto - #FreeAi",
+    "description": "Multiple artificial intelligences must not be censored or controlled by anybody #FreeAI",
+    "copyright": "free",
+    "email": "sign@manifesto.ai",
+    "twitter": {
+      "card": "summary",
+      "site": "@pandoraboxchain",
+      "title": "Decentralized AI Manifesto - #FreeAi",
+      "description": "Multiple artificial intelligences must not be censored or controlled by anybody #FreeAI",
+      "image": "https://manifesto.ai/ssm-manifesto.jpg"      
+    },
+    "og": {
+      "title": "Decentralized AI Manifesto - #FreeAi",
+      "description": "Multiple artificial intelligences must not be censored or controlled by anybody #FreeAI",
+      "url": "manifesto.ai",
+      "image": "https://manifesto.ai/ssm-manifesto.jpg",
+      "image_width": 600,
+      "image_height": 314
+    }
+  }
+}

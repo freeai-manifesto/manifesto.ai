@@ -1,0 +1,486 @@
+@import './fonts.scss';
+@import './grid.scss';
+@import './toast.scss';
+
+$font-family: 'IBM Plex Mono', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', Courier, monospace;
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-heavy: 500;
+$font-height: 1.5;
+
+* {
+    color: #ffffff;
+    text-align: left;
+    font-family: $font-family;
+    font-weight: $font-weight-light;
+    line-height: $font-height;    
+}
+
+.brd {
+    border: red 1px solid;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    background-color: #000000;
+    font-size: 100%;    
+}
+
+html {
+    overflow-x: hidden;
+}
+
+hfooter {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 164px;
+    opacity: 0;
+}
+
+.logo {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 120px;
+    margin-top: 40px;
+    margin-bottom: 64px;
+    position: relative;
+    overflow: visible;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: -1000px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: 0 bottom;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('../images/manifesto.png');
+    }
+}
+
+.logo-bottom {
+    width: 100%;
+    max-width: 200px;
+    height: 100px;
+    background-position: 0 center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url('../images/manifesto-bottom.png'); 
+    margin-top: 60px; 
+}
+
+h2 {
+    font-size: 2em;
+    padding-bottom: 18px;
+    font-weight: $font-weight-heavy;
+
+    .anchor {
+        margin-left: -56px;
+        font-weight: $font-weight-heavy;
+    }
+
+    &.with-comment {
+        padding-bottom: 10px;        
+    }
+}
+
+h1 {
+    font-size: 3.5em;
+    padding-bottom: 64px;
+    font-weight: $font-weight-light;
+
+    &.title {
+        color: #ff0000;
+        padding-top: 100px;
+        padding-bottom: 30px;
+        line-height: 1;
+    }
+
+    &.hash {
+        font-size: 2.2em;
+        margin-top: 16px;
+        line-height: 1.1;
+    }
+
+    &.red {
+        color: #ff0000;
+        font-size: 3.65em;
+        font-weight: $font-weight-light;
+        font-style: normal;
+        font-stretch: normal;
+        letter-spacing: -1px;
+        line-height: 1.25;
+    }
+
+    &.glow {
+        text-shadow: 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 2px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000, 0 0 20px #ff0000;
+    }
+
+    &.support-this {
+        font-size: 4.6em;
+        margin-bottom: 0;
+    }
+
+    br {
+        line-height: 0;
+    }
+}
+
+ul {
+    list-style-type: disc;
+    padding-top: 6px;
+    margin-bottom: 16px;
+
+    li {
+        color: #d1d1d1;
+        margin-left: 30px;
+        margin-bottom: 8px;
+    }
+}
+
+.sign-via-keybase {
+    display: inline-block;
+    margin-top: 80px;
+    border-radius: 6px;
+    background-color: black;
+    border: 0.5px solid white;
+    padding: 4px 32px 4px 32px;
+    text-align: center;
+    color: white;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+.container {
+    margin: 110px auto 0 auto; 
+}
+
+.m-b-20 {
+    margin-bottom: 20px;
+}
+
+.m-b-30 {
+    margin-bottom: 30px;
+}
+
+.m-b-40 {
+    margin-bottom: 40px;
+}
+
+.m-b-80 {
+    margin-bottom: 80px;
+}
+
+.m-bp {
+    margin-bottom: 64px;
+}
+
+.m-b-200 {
+    margin-bottom: 200px;
+}
+
+b, strong {
+    font-weight: $font-weight-heavy;
+}
+
+intro {
+    display: block;
+    box-sizing: border-box;
+    font-size: 3.9em;
+    margin-bottom: 64px;
+}
+
+comment {
+    display: block;
+    box-sizing: border-box;
+
+    &.white {
+        color: white;
+        font-weight: $font-weight-heavy;
+        font-size: 1.5em;
+    }
+    
+    p {
+        font-size: 1.2em;
+        font-weight: $font-weight-light;
+        color: #d1d1d1;
+        margin-bottom: 10px;        
+    }
+
+    &.terminal {
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 84px;
+                
+        &::before {
+            position: absolute;
+            content: '';
+            top: -32px;
+            left: -32px;
+            right: -32px;
+            bottom: -32px;
+            background-color: rgba(105, 105, 105, 0.3);
+            border-radius: 8px;
+        }
+
+        p {
+            color: #45d492 !important;
+            margin-bottom: 12px;
+            font-size: 1.2em !important;
+            font-weight: $font-weight-light !important;
+            word-break: break-all;
+        }
+
+        .clip, .clip-complex1 {
+            display: block;
+            float: right;
+            position: relative; 
+            width: 32px;
+            height: 32px;
+            top: -30px;
+            right: -29px;           
+            border: none;
+            background-color: rgba(105, 105, 105, 0);
+
+            icon {
+                display: block;
+                width: 28px;
+                height: 28px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-image: url('../images/clip.svg');
+                opacity: 0.25;
+                cursor: pointer;
+            }
+
+            &:focus {
+                outline: none;
+            }
+
+            &:active {
+
+                icon {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.keybase {
+
+    comment {
+        p {
+            color: white;
+            font-weight: $font-weight-heavy;
+            font-size: 1.23em;
+
+            a {
+                font-weight: $font-weight-heavy;
+            }
+
+            .anchor {
+                display: inline-block;
+                margin-left: -72px;
+                width: 60px;
+            }
+        }
+    }
+}
+
+fr {
+    color: #45d492;
+    background-color: rgba(105, 105, 105, 0.3);
+    padding: 5px 12px;
+    margin: 0 3px 0 3px;
+    border-radius: 6px;
+}
+
+.social {
+    margin-left: -64px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    div {
+        font-size: 1.2em;
+        margin-bottom: 10px;
+    }
+
+    .link {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    icon {
+        display: inline-block;
+        box-sizing: border-box;
+        vertical-align: middle;
+        width: 32px;
+        height: 32px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-right: 16px;
+        vertical-align: text-bottom;
+    }
+
+    .keybase {
+        display: inline;
+        
+        icon {
+            background-image: url('../images/keybase.svg');
+        }
+    }
+
+    .twitter {
+        display: inline;
+        margin-left: 20px;
+        
+        icon {
+            background-image: url('../images/twitter.svg');
+            width: 27px;
+            height: 27px;
+        }
+    }
+}
+
+@media only screen and (max-width: $breakpoint-small) {
+
+    .col-1 {
+        display: none;
+    }
+
+    .m-b-40 {
+        margin-bottom: 30px;
+    }
+    
+    .m-b-80 {
+        margin-bottom: 60px;
+    }
+    
+    .m-b-200 {
+        margin-bottom: 100px;
+    }
+
+    .m-bp {
+        margin-bottom: 60px;
+    }
+
+    .container {
+        margin: 82px auto 0 auto;
+        padding: 0 24px 0 24px;
+    }
+
+    .logo {
+        height: 80px;
+        margin-top: 0;
+        margin-bottom: 72px;
+    }
+
+    intro {
+        font-size: 2.2em;
+        margin-bottom: 100px
+    }
+
+    comment {
+            
+        p {
+            font-size: 0.95em;
+        }
+
+        &.terminal {
+                
+            &::before {
+                left: -32px;
+            }
+        }
+    }
+
+    .keybase {
+
+        comment {
+            p {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .logo {
+            
+        &::before {
+            background-position: -3px bottom;
+        }
+    }
+
+    h1 {
+        font-size: 1.8em;
+        padding-bottom: 35px;
+
+        &.red {
+            font-size: 3em;            
+        }
+
+        &.support-this {
+            margin-bottom: 20px;
+        }
+
+        &.hash {
+            font-size: 1.75em;
+        }
+    }
+    
+    h2 {
+        font-size: 1em;
+        padding-bottom: 35px;
+
+        .anchor {
+            margin-left: 0;
+        }
+    }
+
+    .sign-via-keybase {
+        padding: 10px 15px 10px 15px;        
+        font-size: 1.2em;
+    }
+
+    .social {
+        font-size: 0.8em;
+        margin-left: 0;
+        
+        div {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        icon {
+            margin-right: 0;
+        }
+
+        .keybase {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .twitter {
+            float: left;
+            width: 100%;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            margin-left: 0;
+        }
+    }
+}
